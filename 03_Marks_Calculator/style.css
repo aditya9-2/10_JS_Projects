@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
     --primary: #393e3e;
@@ -13,10 +6,15 @@
     --secondary-light: #00a0d1;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
     font-family: "Poppins", sans-serif;
-
 }
 
 body {
@@ -24,8 +22,8 @@ body {
 }
 
 .background {
+    background-image: url(background.png);
     height: 100vh;
-    background: url(background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -43,13 +41,12 @@ body {
     gap: 4rem;
 }
 
-
 .box {
     height: 50rem;
     width: 80%;
     background-color: var(--primary);
-    border: .3rem solid var(--secondary);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0, 25);
+    border: 0.5rem solid var(--secondary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3.5rem;
 }
 
@@ -81,7 +78,7 @@ body {
 
 input {
     height: 4.4rem;
-    padding: 0.2rem;
+    padding: 0 2rem;
     border-radius: 0.5rem;
     background-color: transparent;
     border: white 1px solid;
@@ -99,15 +96,13 @@ input::placeholder {
 input:focus-visible {
     outline: 2px solid var(--secondary);
     border: 2px solid var(--secondary);
-
 }
 
 .calculate-form button {
     grid-column: 1/3;
-
 }
 
-.primaryBtn {
+.primary-btn {
     font-size: 2.4rem;
     width: 16rem;
     padding: 1rem 2rem;
@@ -115,15 +110,13 @@ input:focus-visible {
     background-color: var(--secondary);
     color: white;
     border: none;
-
 }
 
-.primaryBtn:hover {
-    cursor: pointer;
-    opacity: 0.8;
+.primary-btn:hover {
+    opacity: 0.9;
 }
 
-.primaryBtn:active {
+.primary-btn:active {
     opacity: 1;
     background-color: var(--secondary-light);
 }
@@ -134,25 +127,23 @@ input:focus-visible {
     font-size: 2rem;
 }
 
-@media (max-width:1150px) {
-
-    .container {
-        width: 100%;
-    }
-
-    .box {
-        width: 60%;
-    }
-}
-
-@media (max-width:786px) {
-
+@media (max-width: 1400px) {
     .container {
         width: 100%;
     }
 
     .box {
         width: 70%;
+    }
+}
+
+@media (max-width: 786px) {
+    .container {
+        width: 100%;
+    }
+
+    .box {
+        width: 90%;
         height: 54rem;
     }
 

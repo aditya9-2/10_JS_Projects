@@ -2,41 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marks Calculaotr</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Your Marks + Percentage</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
     <div class="background">
-
         <div class="container">
-
             <div class="box">
-
-                <form action="" class="calculate-form" id="calculateForm">
-                    <input type="number" name="math" id="math" placeholder="Math" required>
-                    <input type="number" name="english" id="english" placeholder="English" required>
-                    <input type="number" name="physics" id="physics" placeholder="Physics" required>
-                    <input type="number" name="chemistry" id="chemistry" placeholder="Chemistry" required>
-                    <button type="submit" class="primaryBtn" id="btn">Calculate</button>
+                <form onsubmit="calculateMarks(event)" class="calculate-form" id="calculateForm">
+                    <input type="number" required min="0" max="100" name="maths" placeholder="Maths" />
+                    <input type="number" required min="0" max="100" name="english" placeholder="English" />
+                    <input type="number" required min="0" max="100" name="hindi" placeholder="Hindi" />
+                    <input type="number" required min="0" max="100" name="science" placeholder="Science" />
+                    <button type="submit" class="primary-btn">Calculate</button>
                 </form>
-
                 <p id="result" class="result"></p>
-
-
             </div>
-
             <div class="content">
                 <h2>Calculate Your</h2>
                 <h1>Percentage</h1>
             </div>
-
         </div>
-
-
     </div>
 
     <script src="script.js"></script>

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+    --primary: #8f00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.background {
+    background: url(background.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    background: rgba(240, 240, 240, 0.68);
+    border-width: 0 2px 1px 0;
+    border-style: solid;
+    border-color: #fcddec;
+    box-shadow: 0 1.9rem 4.1rem rgba(0, 0, 0, 0.36);
+    border-radius: 2rem;
+    height: 32rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+
+.card h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    color: var(--primary);
+}
+
+.card h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 5.4rem;
+}
+
+#Qform {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+#AnswerInp {
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+
+#AnswerInp:focus-visible {
+
+    border: 1px solid var(--primary);
+    outline: 1px solid var(--primary);
+}
+
+#btn {
+    height: 4.6rem;
+    background: var(--primary);
+    border-radius: 1rem;
+    border: none;
+    color: #ffffff;
+    font-size: 3.2rem;
+}
+
+@media screen and (max-width:768px) {
+
+    .card {
+        width: 80%;
+        height: 36rem;
+        padding: 2rem;
+    }
+
+    .card h2 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        color: var(--primary);
+    }
+
+    .card h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+
+    #AnswerInp {
+        padding: .5rem 2rem;
+    }
+
+    #btn {
+        font-size: 2.4rem;
+        height: 3rem;
+    }
+}

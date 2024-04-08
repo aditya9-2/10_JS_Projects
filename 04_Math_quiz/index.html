@@ -15,8 +15,8 @@
         <div class="card">
             <h2>Score - <span id="score">0</span></h2>
             <h3 id="questions">Q. What is 8 * 4?</h3>
-            <form id="Qform">
-                <input id="AnswerInp" type="number">
+            <form id="Qform" onsubmit="checkAnswer(event)">
+                <input required id="AnswerInp" name="answer" type="number">
                 <button id="btn">Submit</button>
 
             </form>

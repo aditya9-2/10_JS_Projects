@@ -15,9 +15,32 @@ const GenerateQuestion = () => {
 
     const rand1 = randomNumber(1, 10);
     const rand2 = randomNumber(1, 10);
-    const questions = `Q. What is ${rand1} * ${rand2}?`;
-    const answer = rand1 * rand2;
-    return { questions, answer };
+    let question;
+    let answer;
+    switch (questionType) {
+        case 1:
+            question = `Q. What is ${firstNumber} multiply by ${secondNumber} ?`;
+            answer = rand1 * rand2;
+            break;
+        case 2:
+            question = `Q. What is ${firstNumber} Add to ${secondNumber} ?`;
+            answer = rand1 + rand2;
+            break;
+        case 3:
+            question = `Q. What is ${firstNumber} Divided By ${secondNumber} ?`;
+            answer = rand1 / rand2;
+            break;
+        case 4:
+            question = `Q. What is ${firstNumber} Subtract from ${secondNumber} ?`;
+            answer = rand1 - rand2;
+            break;
+        default:
+            question = `Q. What is ${firstNumber} Subtract from ${secondNumber} ?`;
+            answer = rand1 - rand2;
+            break;
+    }
+
+    return { question, answer };
 
 };
 

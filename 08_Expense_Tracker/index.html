@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+            <div class="boxUpper">
+                <h1>Expense Tracker</h1>
+
+                <div class="balance">
+                    <h2 id="netAmount">₹0</h2>
+                    <h3>Your Balance</h3>
+                </div>
+            </div>
+
+            <div class="transactionContainer">
+                <h3>Transactions</h3>
+                <hr>
+
+                <div class="transactionList">
+
+
+                </div>
+            </div>
+
+            <div class="transactionForm">
+
+                <h3>Add Transactions</h3>
+
+                <form id="Transaction_form">
+                    <div class="inputs">
+                        <div class="formControl">
+                            <label for="text">Text</label>
+                            <input placeholder="Enter Description" type="text" name="text" id="text">
+                        </div>
+
+                        <div class="formControl">
+                            <label for="amount">Amount</label>
+                            <input placeholder="Enter Amount" type="number" name="amount" id="amount">
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" id="ernBtn">
+                            <p id="earnings">₹0</p>
+                            <p>Earnings</p>
+                        </button>
+
+                        <button type="submit" id="expBtn">
+                            <p id="expense">₹0</p>
+                            <p>Expense</p>
+                        </button>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

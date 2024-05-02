@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+
+    --background: #090909;
+    --primary: #0f215e;
+    --text-color: #ffffff;
+    --button: #3b6af6;
+    --buton-active: #0127e5;
+    --password-area: #424c68;
+    --range-color: #01d293;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.container {
+    background: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.box {
+    height: 40rem;
+    width: 40rem;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.heading h1 img {
+    position: relative;
+    top: 3px;
+}
+
+#password {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--password-area);
+    margin: 1rem 0;
+    border-radius: 2px;
+    color: var(--text-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#password:hover {
+    cursor: grab;
+}
+
+#password:active {
+    cursor: grabbing;
+}
+
+.range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+input[type="range"] {
+    appearance: none;
+    height: 0.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    height: 2rem;
+    width: 1rem;
+    border: 1px solid black;
+    background-color: var(--range-color);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--range-color);
+    cursor: pointer;
+}
+
+.checkBoxes {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.form-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control label {
+    font-size: 1.4rem;
+    letter-spacing: .3px;
+}
+
+#btn {
+    width: auto;
+    padding: 10px 20px;
+    margin: .8rem auto;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+    transition: .35s ease-in-out;
+    background-color: var(--button);
+    color: var(--text-color);
+}
+
+#btn:hover {
+    cursor: pointer;
+    scale: 1.01;
+    opacity: .8;
+    transition: .35s ease-in-out;
+}
+
+#btn:active {
+    background-color: var(--buton-active);
+}
+
+@media (max-width:420px) {
+    .box {
+        width: 80%;
+        height: 70vh;
+    }
+
+    .heading h1 {
+        font-size: 18px;
+    }
+
+    .heading h1 img {
+        width: 18px;
+        top: 1px;
+    }
+
+    #password {
+        font-weight: 500;
+    }
+}
